@@ -9,7 +9,7 @@ int g[MAX][MAX] = {
     {0, 0, -3, 0, 9},
     {2, 0, 7, 0, 0},
 };
-
+//Checking the array after every iteration if the arrays are same then algorithm get completes
 int checkarr(int a[], int b[], int n)
 {
     int flag = 0;
@@ -26,7 +26,7 @@ int checkarr(int a[], int b[], int n)
     }
     return 0;
 }
-
+//This make changes in the distance and parent array according to the algo 
 void mindist(int d[], int par[], int u, int v)
 {
 
