@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int x[100] = {0};
+int x[100];
 
 void printa(int w[], int k)
 {
@@ -45,7 +45,7 @@ void sos(int s, int k, int r, int w[], int m, int n)
 
 void main()
 {
-    int w[] = {5, 10, 12, 13, 15, 18}, m = 30;
+    int w[] = {2, 3, 5, 6, 8, 10}, m = 10;
     int n = sizeof(w) / sizeof(w[0]);
     int r = 0;
     for (int i = 0; i < n; i++)
