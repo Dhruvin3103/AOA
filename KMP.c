@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<string.h>
-
-int *prefix_fun(char *p)
+int pie[100];
+void prefix_fun(char p[])
 {
-    static int pie[100],k=0;
+    int k=0;
     pie[0]=0;
     // printf("hi");
     for(int i=1; i<strlen(p);i++)
@@ -19,7 +19,6 @@ int *prefix_fun(char *p)
             k+=1;}
         pie[i]=k;
     }
-    return pie;
 }
 
 // int *retarr(int *p)
@@ -33,14 +32,11 @@ int *prefix_fun(char *p)
 void main()
 {
     int tlen,plen,q=0;
-    int *pie;
-    char text[200]="ababcabcabababd",pat[100]="ababd";
+    char text[200]="ababcabcabababd",pat[100]="abc";
     tlen = strlen(text);
     plen = strlen(pat);
-    pie = prefix_fun(pat);
+    prefix_fun(pat);
     // printf("\nLength : %d %d\n",tlen,plen);
-    for(int i=0;i<plen;i++)
-        printf("pie elements at 0 pos: %d\n", pie[i]);
     for(int i=0;i<tlen;i++)
     {
         // printf("|%d|",q);
