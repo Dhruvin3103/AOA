@@ -10,7 +10,7 @@ int g[MAX][MAX] = {
     {2, 0, 7, 0, 0},
 };
 
-int checkarr(int a[], int b[], int n)
+/*int checkarr(int a[], int b[], int n)
 {
     int flag = 0;
     for (int i = 0; i < n; i++)
@@ -25,7 +25,7 @@ int checkarr(int a[], int b[], int n)
         return -1;
     }
     return 0;
-}
+}*/
 
 int mindist(int d[], int par[], int u, int v)
 {
@@ -61,7 +61,7 @@ void main()
             }
         }
         printf("\n");
-        if (checkarr(d1, d2, MAX) == -1)
+        /*if (checkarr(d1, d2, MAX) == -1)
         {
             break;
         }
@@ -69,7 +69,7 @@ void main()
         {
             d2[k] = d1[k];
             par2[k] = par1[k];
-        }
+        }*/
         c++;
     } while (c < MAX);
 
