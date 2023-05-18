@@ -5,7 +5,7 @@ int pie[100];
 
 void prefix_fun(char p[])
 {
-    static int pie[100], k = 0;
+   int k = 0;
     pie[0] = 0;
     for (int i = 1; i < strlen(p); i++)
     {
