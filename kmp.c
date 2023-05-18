@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-int *prefix_fun(char *p)
+int pie[100];
+
+void prefix_fun(char p[])
 {
     static int pie[100], k = 0;
     pie[0] = 0;
@@ -17,17 +19,15 @@ int *prefix_fun(char *p)
         }
         pie[i] = k;
     }
-    return pie;
 }
 
 void main()
 {
     int tlen, plen, q = 0;
-    int *pie;
     char text[200] = "xyzahxyfxyzd", pat[100] = "xyz";
     tlen = strlen(text);
     plen = strlen(pat);
-    pie = prefix_fun(pat);
+    prefix_fun(pat);
     for (int i = 0; i < tlen; i++)
     {
         while (q > 0 && pat[q] != text[i])
